@@ -29,20 +29,29 @@
     <!-- Script Vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <!-- Functions Script -->
-    <script src="./js/functions.js" defer></script>
-
     <!--  Main Script -->
     <script src="./js/main.js" defer></script>
 </head>
 <body>
     <!-- Inizio Header -->
     <header>
+
+        <div id="header-app">
+            <h1 :class="header.class">{{ header.title }}</h1>
+            <h2 :class="header.class"><i class="bi bi-arrow-down-circle-fill"></i> {{ header.info }} <i class="bi bi-arrow-down-circle-fill"></i></h2>
+        </div>
         
     </header>
     <!-- Fine Header -->
     <!-- Inizio Main -->
     <main>
+        <div class="container w-50 mx-auto">
+            <div id="main-app">
+                <a class="d-flex justify-content-center" :href="main.site" target="_blank">
+                    <img :class="main.class" :src="main.image" alt="Boolean-logo">
+                </a>
+            </div>
+        </div>
         
     </main>
     <!-- Fine Main -->
